@@ -125,7 +125,7 @@ inputs:
     extraPackages = with pkgs; [
       bash-language-server
       shfmt
-      ];
+    ];
   };
   config.specs.python = {
     after = [ "general" ];
@@ -191,6 +191,7 @@ inputs:
       lualine-nvim
       gitsigns-nvim
       which-key-nvim
+      guess-indent-nvim
       fidget-nvim
       nvim-lint
       conform-nvim
