@@ -791,6 +791,9 @@ nixInfo.lze.load({
               "-",
             },
           },
+          ["google-java-format"] = {
+            prepend_args = { "--aosp" },
+          },
         },
       })
 
