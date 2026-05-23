@@ -281,7 +281,16 @@ nixInfo.lze.load({
   {
     "rose-pine",
     auto_enable = true,
-    colorscheme = "rose-pine",
+    after = function(plugin)
+      require("rose-pine").setup({
+        variant = "moon",
+        palette = {
+          moon = {
+            base = "#0C0C12",
+          },
+        },
+      })
+    end,
   },
   {
     "snacks.nvim",
