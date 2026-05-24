@@ -17,6 +17,10 @@
     url = "github:szymonwilczek/arete.nvim";
     flake = false;
   };
+  inputs.plugins-cord = {
+    url = "github:vyfor/cord.nvim";
+    flake = false;
+  };
   outputs =
     {
       self,

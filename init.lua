@@ -260,10 +260,10 @@ nixInfo.lze.load({
       end)
     end,
   },
-    -- NOTE: view these names in the info plugin!
-    -- :lua nixInfo.lze.debug.display(nixInfo.plugins)
-    -- The display function is from lzextras
-    -- auto_enable = true, -- <- auto enable is useful here
+  -- NOTE: view these names in the info plugin!
+  -- :lua nixInfo.lze.debug.display(nixInfo.plugins)
+  -- The display function is from lzextras
+  -- auto_enable = true, -- <- auto enable is useful here
   {
     "catppuccin-nvim",
     auto_enable = true,
@@ -325,6 +325,17 @@ nixInfo.lze.load({
 
       -- To apply a theme, simply use the standard Neovim colorscheme command
       -- vim.cmd.colorscheme("ef-bio")
+    end,
+  },
+  {
+    "cord",
+    auto_enable = true,
+    lazy = "VeryLazy",
+    event = "UIEnter",
+    after = function(plugin)
+      require("cord").setup({
+        log_level = nil,
+      })
     end,
   },
   {

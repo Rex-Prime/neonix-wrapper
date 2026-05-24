@@ -95,6 +95,10 @@ inputs:
     }
   ];
 
+  config.specs.cord = {
+    data = config.nvim-lib.neovimPlugins.cord;
+  };
+
   # you can name these whatever you want.
   config.specs.nix = {
     data = null;
