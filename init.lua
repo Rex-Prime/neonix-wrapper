@@ -334,6 +334,17 @@ nixInfo.lze.load({
     after = function(plugin)
       require("cord").setup({
         -- log_level = nil,
+        display ={
+          theme = "void",
+        },
+        assets = {
+          lua = {
+            tooltip = "Luaaaaaaaa", -- Custom tooltip for Lua files
+          },
+          nix = {
+            tooltip = "❄️",
+          }
+        },
         buttons = {
           {
             label = function(opts)
