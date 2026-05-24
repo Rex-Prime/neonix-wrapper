@@ -330,11 +330,26 @@ nixInfo.lze.load({
   {
     "cord",
     auto_enable = true,
-    lazy = "VeryLazy",
     event = "UIEnter",
     after = function(plugin)
       require("cord").setup({
-        log_level = nil,
+        -- log_level = nil,
+        buttons = {
+          {
+            label = function(opts)
+              return opts.repo_url and "View Repository" or "My Website"
+            end,
+            url = function(opts)
+              return opts.repo_url or "https://example.com"
+            end,
+          },
+        },
+        hooks = {
+          post_activity = function(opts, activity)
+            local version = vim.version()
+            activity.assets.small_text = string.format("Neovim %s.%s.%s", version.major, version.minor, version.patch)
+          end,
+        },
       })
     end,
   },
