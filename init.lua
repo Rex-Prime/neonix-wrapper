@@ -348,10 +348,10 @@ nixInfo.lze.load({
         buttons = {
           {
             label = function(opts)
-              return opts.repo_url and "View Repository" or "My Website"
+              return opts.repo_url and "View Repository" or "Github"
             end,
             url = function(opts)
-              return opts.repo_url or "https://example.com"
+              return opts.repo_url or "https://github.com/Rex-Prime/"
             end,
           },
         },
