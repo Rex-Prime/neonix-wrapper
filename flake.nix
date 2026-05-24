@@ -13,6 +13,10 @@
     url = "github:BirdeeHub/lzextras";
     flake = false;
   };
+  inputs.plugins-arete = {
+    url = "github:szymonwilczek/arete.nvim";
+    flake = false;
+  };
   outputs =
     {
       self,

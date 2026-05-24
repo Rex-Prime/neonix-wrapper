@@ -40,8 +40,9 @@ inputs:
   # You can declare your own options!
   options.settings.colorscheme = lib.mkOption {
     type = lib.types.str;
-    default = "onedark_dark";
+    default = "rose-pine";
   };
+
   config.settings.colorscheme = "rose-pine"; # <- just demonstrating that it is an option
   # and grab it in lua with `require(vim.g.nix_info_plugin_name)("onedark_dark", "settings", "colorscheme") == "moonfly"`
   config.specs.colorscheme = {
@@ -49,13 +50,10 @@ inputs:
     data = builtins.getAttr config.settings.colorscheme (
       with pkgs.vimPlugins;
       {
-        "onedark_dark" = onedarkpro-nvim;
-        "onedark_vivid" = onedarkpro-nvim;
-        "onedark" = onedarkpro-nvim;
-        "onelight" = onedarkpro-nvim;
-        "moonfly" = vim-moonfly-colors;
         "catppuccin" = catppuccin-nvim;
         "rose-pine" = rose-pine;
+        "ef-dark" = config.nvim-lib.neovimPlugins.arete;
+        "modus-vivendi" = config.nvim-lib.neovimPlugins.arete;
       }
     );
   };
@@ -70,6 +68,7 @@ inputs:
   config.settings.anothertestvalue = {
     settings = "can also accept freeform values";
   };
+
 
   # If the defaults are fine, you can just provide the `.data` field
   # In this case, a list of specs, instead of a single plugin like above

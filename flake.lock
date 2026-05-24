@@ -16,6 +16,22 @@
         "type": "github"
       }
     },
+    "plugins-arete": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1779554625,
+        "narHash": "sha256-VI2hpqGEebGOSJkPEH2BOFBdsx5PY4yl7AdloNo1X+U=",
+        "owner": "szymonwilczek",
+        "repo": "arete.nvim",
+        "rev": "80948adc43c92e4baeee77fdf252652ac0f03b14",
+        "type": "github"
+      },
+      "original": {
+        "owner": "szymonwilczek",
+        "repo": "arete.nvim",
+        "type": "github"
+      }
+    },
     "plugins-lze": {
       "flake": false,
       "locked": {
@@ -51,6 +67,7 @@
     "root": {
       "inputs": {
         "nixpkgs": "nixpkgs",
+        "plugins-arete": "plugins-arete",
         "plugins-lze": "plugins-lze",
         "plugins-lzextras": "plugins-lzextras",
         "wrappers": "wrappers"

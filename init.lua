@@ -260,19 +260,10 @@ nixInfo.lze.load({
       end)
     end,
   },
-  {
     -- NOTE: view these names in the info plugin!
     -- :lua nixInfo.lze.debug.display(nixInfo.plugins)
     -- The display function is from lzextras
-    "onedarkpro.nvim",
-    auto_enable = true, -- <- auto enable is useful here
-    colorscheme = { "onedark", "onedark_dark", "onedark_vivid", "onelight" },
-  },
-  {
-    "vim-moonfly-colors",
-    auto_enable = true,
-    colorscheme = "moonfly",
-  },
+    -- auto_enable = true, -- <- auto enable is useful here
   {
     "catppuccin-nvim",
     auto_enable = true,
@@ -290,6 +281,50 @@ nixInfo.lze.load({
           },
         },
       })
+    end,
+  },
+  {
+    "arete",
+    auto_enable = true,
+    after = function(plugin)
+      local arete = require("arete")
+
+      arete.setup({
+        -- Enable transparent background for the editor
+        transparent = false,
+
+        -- Use the bytecode cache engine (highly recommended for performance)
+        -- cache = true,
+
+        -- Set specific styles for specific syntax highlight groups
+        -- Can be any valid attr-list value. See `:h nvim_set_hl`
+        styles = {
+          comments = { italic = true },
+          keywords = { bold = true },
+          types = { bold = true },
+          functions = {},
+          variables = {},
+        },
+
+        -- Direct, unconditional group overrides
+        -- Can be a table or a function returning a table
+        groups = {
+          -- CustomHighlight = { fg = "#ff0000", bg = "NONE" },
+        },
+
+        -- Programmatic highlight overrides based on the loaded theme
+        ---@param highlights table
+        ---@param name string
+        ---@return table
+        on_highlights = function(highlights, name)
+          -- return {
+          --   NormalFloat = { fg = highlights.Normal.fg, bg = "NONE" },
+          -- }
+        end,
+      })
+
+      -- To apply a theme, simply use the standard Neovim colorscheme command
+      -- vim.cmd.colorscheme("ef-bio")
     end,
   },
   {
@@ -1023,7 +1058,10 @@ nixInfo.lze.load({
       require("lualine").setup({
         options = {
           icons_enabled = true,
-          theme = nixInfo("onedark_dark", "settings", "colorscheme"),
+          -- this was throwing an error, because it could detect the theme?
+          -- So, i disabled it. It still uses the main colorscheme
+
+          -- theme = nixInfo("auto", "settings", "colorscheme"),
           component_separators = "|",
           section_separators = "",
         },
