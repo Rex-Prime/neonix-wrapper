@@ -1,4 +1,2 @@
-return {
-  { import = "core.keymaps" },
-  { import = "core.options"},
-}
+require("core.options")
+require("core.keymaps")

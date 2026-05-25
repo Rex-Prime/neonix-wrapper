@@ -92,7 +92,9 @@ nixInfo.lze.h.lsp.set_ft_fallback(function(name)
     return (vim.lsp.config[name] or {}).filetypes or {}
   end
 end)
+
 require("core")
+
 require("lze").load("plugins")
 -- NOTE: You will likely want to break this up into more files.
 -- You can call this more than once.
