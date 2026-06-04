@@ -32,6 +32,22 @@
         "type": "github"
       }
     },
+    "plugins-cord": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1780248226,
+        "narHash": "sha256-EB7wJjO+pvlixl9C65/kZAYaHwAPR31a2pVbCr9yIH4=",
+        "owner": "vyfor",
+        "repo": "cord.nvim",
+        "rev": "92853b8a78f3502ff2132671e45bbcd718bfcd47",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vyfor",
+        "repo": "cord.nvim",
+        "type": "github"
+      }
+    },
     "plugins-lze": {
       "flake": false,
       "locked": {
@@ -68,6 +84,7 @@
       "inputs": {
         "nixpkgs": "nixpkgs",
         "plugins-arete": "plugins-arete",
+        "plugins-cord": "plugins-cord",
         "plugins-lze": "plugins-lze",
         "plugins-lzextras": "plugins-lzextras",
         "wrappers": "wrappers"

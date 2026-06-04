@@ -96,7 +96,7 @@ inputs:
   ];
 
   config.specs.cord = {
-    data = pkgs.vimPlugins.cord-nvim;
+    data = config.nvim-lib.neovimPlugins.cord;
   };
 
   # you can name these whatever you want.
