@@ -1,6 +1,6 @@
 return {
   {
-    "cord",
+    "cord.nvim",
     auto_enable = true,
     event = "UIEnter",
     after = function(plugin)
