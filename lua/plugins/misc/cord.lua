@@ -56,6 +56,7 @@ return {
             activity.assets.small_text =
               string.format("Neovim %s.%s.%s", version.major, version.minor, version.patch, opts.cursor_line)
             activity.state = string.format("%s | %d:%d", opts.workspace, opts.cursor_line, opts.cursor_char)
+            activity.type = "playing" -- 'playing' | 'listening' | 'watching' | 'competing'
           end,
         },
       })
