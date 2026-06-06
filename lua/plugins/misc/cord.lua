@@ -17,6 +17,9 @@ return {
             tooltip = "❄️",
           },
         },
+        editor = {
+          icon = "https://github.com/vyfor/icons/blob/master/icons/minecraft/dark/neovim.png?raw=true",
+        },
         buttons = {
           {
             label = function(opts)
