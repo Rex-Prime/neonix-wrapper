@@ -42,6 +42,7 @@ vim.o.expandtab = true
 -- vim.o.shiftwidth = 4
 
 -- stops line wrapping from being confusing
+vim.opt.linebreak = true
 vim.o.breakindent = true
 
 -- Save undo history
