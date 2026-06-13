@@ -164,6 +164,9 @@ return {
       vim.keymap.set("n", "<leader>su", function()
         Snacks.picker.undo()
       end, { desc = "Undo History" })
+      vim.keymap.set("n", "<leader>uw", function()
+        Snacks.toggle.option("wrap", { name = "Wrap" }):toggle()
+      end, { desc = "Unwraps lines"})
     end,
   },
 }
