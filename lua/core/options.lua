@@ -71,7 +71,7 @@ vim.o.termguicolors = true
 vim.api.nvim_create_autocmd("FileType", {
   desc = "remove formatoptions",
   callback = function()
-    vim.opt.formatoptions:remove({ "c", "r", "o" })
+    vim.opt.formatoptions:remove({ "c" })
   end,
 })
 
